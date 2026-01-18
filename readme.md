@@ -96,7 +96,7 @@ mvn -version
 ### 6.2 Clonar el repositorio
 
 ```bash
-git clone https://github.com/USUARIO/PetStoreKarate.git
+git clone git clone https://github.com/HenrryCh/petstore-api-testing-karate.git
 cd PetStoreKarate
 ```
 
