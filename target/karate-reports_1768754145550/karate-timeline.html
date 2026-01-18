@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"petstore\/feature\/petstore[1:8]","start":1768754067289,"end":1768754069198,"title":"petstore\/feature\/petstore[1:8] 11:34:27.289-11:34:29.198 1. Añadir una mascota a la tienda","className":"failed"},{"id":2,"group":1,"content":"petstore\/feature\/petstore[2:26]","start":1768754069219,"end":1768754069633,"title":"petstore\/feature\/petstore[2:26] 11:34:29.219-11:34:29.633 2. Consultar la mascota por ID","className":"failed"},{"id":3,"group":1,"content":"petstore\/feature\/petstore[3:37]","start":1768754069647,"end":1768754069980,"title":"petstore\/feature\/petstore[3:37] 11:34:29.647-11:34:29.980 3. Actualizar nombre y estatus a sold","className":"failed"},{"id":4,"group":1,"content":"petstore\/feature\/petstore[4:61]","start":1768754069994,"end":1768754070440,"title":"petstore\/feature\/petstore[4:61] 11:34:29.994-11:34:30.440 4. Consultar mascota por estatus sold","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

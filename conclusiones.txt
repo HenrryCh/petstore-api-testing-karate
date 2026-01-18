@@ -1,0 +1,16 @@
+Conclusiones del ejercicio – Automatización API PetStore
+
+Durante la implementación de este ejercicio se logró validar de manera satisfactoria el flujo de gestión de mascotas expuesto por la API PetStore.
+
+Los principales hallazgos y conclusiones son los siguientes:
+
+1. La API PetStore permite validar correctamente las operaciones CRUD básicas mediante endpoints REST bien definidos y documentados.
+2. Karate Framework demostró ser una herramienta robusta, legible y eficiente para la automatización de pruebas de servicios REST sin necesidad de escribir código Java complejo.
+3. El uso de archivos JSON externos mejora la mantenibilidad y claridad de los datos de prueba.
+4. La reutilización de variables entre escenarios facilita la validación de flujos encadenados y escenarios dependientes.
+5. La generación automática de reportes HTML permite un análisis rápido y visual de los resultados de ejecución.
+6. La API responde de manera consistente a las operaciones realizadas, manteniendo la integridad de los datos durante el flujo de pruebas.
+
+Conclusión final:
+
+El ejercicio permitió demostrar buenas prácticas en pruebas de servicios REST, aplicando automatización con Karate Framework de forma estructurada, reproducible y alineada a estándares profesionales de calidad de software.

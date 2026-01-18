@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"petstore\/feature\/petstore[1:8]","start":1768754147593,"end":1768754149577,"title":"petstore\/feature\/petstore[1:8] 11:35:47.593-11:35:49.577 1. Añadir una mascota a la tienda"},{"id":2,"group":1,"content":"petstore\/feature\/petstore[2:26]","start":1768754149595,"end":1768754150020,"title":"petstore\/feature\/petstore[2:26] 11:35:49.595-11:35:50.020 2. Consultar la mascota por ID","className":"failed"},{"id":3,"group":1,"content":"petstore\/feature\/petstore[3:37]","start":1768754150049,"end":1768754150378,"title":"petstore\/feature\/petstore[3:37] 11:35:50.049-11:35:50.378 3. Actualizar nombre y estatus a sold","className":"failed"},{"id":4,"group":1,"content":"petstore\/feature\/petstore[4:61]","start":1768754150390,"end":1768754150820,"title":"petstore\/feature\/petstore[4:61] 11:35:50.390-11:35:50.820 4. Consultar mascota por estatus sold","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
